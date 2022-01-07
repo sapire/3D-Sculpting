@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-07T08:09:10.256Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="v0M0-NY5bH7S4wpW_8yP" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-07T08:14:40.377Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="vHh46Fdpp2WxGRtxmDKv" version="16.2.2" type="github">
   <diagram id="ELG3nIPZtsuA4GLGCF9C" name="Page-1">
     <mxGraphModel dx="1186" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -91,6 +91,50 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="520" as="sourcePoint" />
             <mxPoint x="510" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-4" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essential-17/32/UI_Essential_Outline_1_essential-app-ui-printer-device-print-128.png" vertex="1" parent="1">
+          <mxGeometry x="430" y="511" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-5" value="Save / share file" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GQBndkDP9qIrQhqpSyb7-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="540" as="sourcePoint" />
+            <mxPoint x="690" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-6" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/essential-app-1/16/share-link-connection-network-128.png" vertex="1" parent="1">
+          <mxGeometry x="670" y="670" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GQBndkDP9qIrQhqpSyb7-10" target="R92QJJ_KU8hphDVG4ZgR-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="540" as="sourcePoint" />
+            <mxPoint x="770" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-8" value="Exit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R92QJJ_KU8hphDVG4ZgR-7">
+          <mxGeometry x="-0.0667" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-10" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-filled-128.png" vertex="1" parent="1">
+          <mxGeometry x="770" y="526" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.128;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.4;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="R92QJJ_KU8hphDVG4ZgR-4" target="GQBndkDP9qIrQhqpSyb7-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="470" as="sourcePoint" />
+            <mxPoint x="450" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="368" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R92QJJ_KU8hphDVG4ZgR-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.133;entryY=1.083;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="R92QJJ_KU8hphDVG4ZgR-6" target="GQBndkDP9qIrQhqpSyb7-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="470" as="sourcePoint" />
+            <mxPoint x="450" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="336" y="689" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
