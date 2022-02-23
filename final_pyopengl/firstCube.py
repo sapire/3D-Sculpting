@@ -4,6 +4,7 @@ from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
 
+vertex_number = 0
 
 verticies = (
     (1,-1,-1),
@@ -13,7 +14,8 @@ verticies = (
     (1,-1,1),
     (1,1,1),
     (-1,-1,1),
-    (-1,1,1)
+    (-1,1,1),
+    (2, 0, 0)#new vertex
 )
 
 edges=(
@@ -21,8 +23,12 @@ edges=(
     (0,3),
     (0,4),
     (2,1),
-    (2,3),#
-    (2,7),#
+    (1,8),#
+    (8,0),#
+    (4,8),#
+    (8,5),#
+    (2,3),
+    (2,7),
     (6,3),
     (6,4),
     (6,7),
@@ -32,12 +38,16 @@ edges=(
 )
 
 surfaces=(
-    (0,1,2,3),#
+    (0,1,2,3),
     (3,2,7,6),
     (6,7,5,4),
-    (4,5,1,0),
+    # (4,5,1,0),
     (1,5,7,2),
-    (4,0,3,6)
+    (4,0,3,6),
+    (8,1,0,0),#
+    (1,5,8,8),#
+    (5,4,8,8),#
+    (4,0,8,8)#
 )
 
 colors=(
@@ -55,9 +65,7 @@ colors=(
     (0, 0, 0)
 )
 
-
-def cube():
-    #not only lines anymore
+def print_with_s():
     glBegin(GL_QUADS)
     x=0
     for surface in surfaces:
@@ -67,6 +75,7 @@ def cube():
             glVertex3fv(verticies[vertex])
     glEnd()
 
+def print_with_l_only():
     glBegin(GL_LINES) #define gl
     #gl code that we want to specfy
     for edge in edges:
@@ -75,6 +84,10 @@ def cube():
     glEnd()
 
 
+def cube():
+    print_with_s()
+
+    # print_with_l_only():
 
 
 def main():
@@ -88,6 +101,13 @@ def main():
     glTranslatef(0.0,0.0,-10)
     glRotatef(0,0,0,0) #rotate acordding the axis x,y,z
     #run until the user click quit
+
+    new_x_mouse=0
+    new_y_mouse=0
+    x_mouse=0
+    y_mouse=0
+    cube_draging=False
+    glMatrixMode(GL_MODELVIEW);
     while True:
         #get every event
         for event in pygame.event.get():
@@ -107,11 +127,31 @@ def main():
                     glTranslatef(0.0, -1, 0.0)
             #mouse event
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if event.button == 4:
-                    glTranslatef(0,0,1)
-                if event.button == 5:
-                    glTranslatef(0,0,-1)
-        glRotatef(1, 3, 1, 1)
+                if event.button==1:
+                    if cube_draging==False:
+                        cube_draging=True
+                        x_mouse,y_mouse=pygame.mouse.get_pos() 
+                
+            if event.type==pygame.MOUSEBUTTONUP:
+                if event.button==1:
+                    cube_draging=False
+
+            if event.type==pygame.MOUSEMOTION:
+                if cube_draging==True:
+                    new_x_mouse,new_y_mouse= pygame.mouse.get_pos()
+                    glTranslatef((new_x_mouse-x_mouse)/100, (y_mouse-new_y_mouse)/100, 0)
+                    x_mouse,y_mouse = new_x_mouse, new_y_mouse
+                    
+
+                # if event.button == 4:
+                #     glTranslatef(0,0,1)
+                # if event.button == 5:
+                #     glTranslatef(0,0,-1)
+            
+            
+
+
+        # glRotatef(1, 3, 1, 1)
         #clear the frame with something - clear all that specfiy
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
         cube()
